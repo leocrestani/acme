@@ -1,0 +1,20 @@
+.bg-cinza{
+    background-color: #ECECEC;
+}
+
+.produto{
+    border: 1px solid #585858;
+    border-radius: 5px;
+}
+
+.produto-imagem{
+    border-radius: 5px;
+}
+
+.favorito{
+    opacity: 0.7;
+    color: #585858;
+    position: relative;
+    height: 0;
+    right:0;
+}
