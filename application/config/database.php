@@ -77,7 +77,7 @@ $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => $url["host"],
+	'hostname' => 'us-cdbr-east-05.cleardb.net',
 	'username' => $url["host"],
 	'password' => $url["host"],
 	'database' => substr($url["path"], 1),
