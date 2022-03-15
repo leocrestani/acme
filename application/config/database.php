@@ -77,10 +77,10 @@ $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => $url["host"],
-	'username' => $url["host"],
-	'password' => $url["host"],
-	'database' => substr($url["path"], 1),
+	'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => 'dB28#glukDatabase',
+	'database' => 'acme',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

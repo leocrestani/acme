@@ -24,8 +24,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                     <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
                         <li>
-                            <a href="#" class="nav-link text-secondary">
-                                <img height="55" src="assets\images\shopping-cart.png" alt="Carrinho">
+                            <a href="<?=$u?>/carrinho" class="nav-link text-secondary">
+                                <img height="55" src="<?=$u?>assets\images\shopping-cart.png" alt="Carrinho">
                             </a>
                         </li>                    
                     </ul>

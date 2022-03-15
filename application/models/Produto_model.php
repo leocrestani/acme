@@ -6,7 +6,7 @@ class Produto_model extends CI_Model{
     public function getAllByName(){
         $this->db->select('*');
         $this->db->from('produto');
-        $this->db->order_by('nome', 'desc');
+        $this->db->order_by('nome', 'asc');
         $data = $this->db->get();
         return $data->result_array();
     }
@@ -19,6 +19,14 @@ class Produto_model extends CI_Model{
         $this->db->order_by('nome', 'desc');
         $data = $this->db->get();
         return $data->result_array();
+    }
+
+    public function getById($id){
+        $this->db->select('*');
+        $this->db->from('produto');
+        $this->db->where('id', $id);
+        $data = $this->db->get();
+        return $data->row_array();
     }
 
     //Verifica se nao existe um produto com o mesmo nome
@@ -59,7 +67,7 @@ class Produto_model extends CI_Model{
             'nome' => $nome,
             'descricao' => $descricao,
             'valor' => round((10 + strlen($nome) * ((500 - strlen($descricao)) / (30 - strlen($nome)))), 2),
-            'imagem' => 'https://picsum.photos/'. rand(0,100000000) . '/picsum/200/300'
+            'imagem' => 'https://picsum.photos/seed/'. rand(0,100000000) . '/800'
         );
         $this->db->insert('produto', $data);
     }
