@@ -18,9 +18,4 @@ class Carrinho extends CI_Controller {
 		$this->load->view('carrinho', $this->data);
 		$this->load->view('sections/footer', $this->data);
 	}
-
-    public function finalizar()
-	{
-        
-    }
 }

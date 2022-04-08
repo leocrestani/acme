@@ -12,6 +12,7 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
+		$this->pm->criarProduto();
 		$this->data['produtos'] = $this->pm->getAllByName();
 
 		$this->load->view('sections/header', $this->data);
